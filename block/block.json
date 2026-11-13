@@ -1,0 +1,18 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "breedio/foal-coat",
+  "title": "Foal coat calculator",
+  "category": "widgets",
+  "icon": "art",
+  "description": "Lets visitors predict the coat of a foal from your stallions.",
+  "keywords": ["stallion", "coat", "foal", "horse"],
+  "textdomain": "breedio-foal-coat",
+  "attributes": {
+    "stallion": { "type": "integer", "default": 0 },
+    "mode": { "type": "string", "enum": ["predict", "match"], "default": "predict" }
+  },
+  "supports": { "html": false },
+  "editorScript": "breedio-foal-coat-editor",
+  "render": "file:./render.php"
+}
